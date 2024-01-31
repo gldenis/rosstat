@@ -1,0 +1,59 @@
+* {
+    box-sizing: border-box;
+}
+
+#__nuxt {
+    display: flex;
+    width: 100%;
+}
+
+.page__body {
+    min-height: 100vh;
+    margin: 0;
+    padding: 0;
+    background: url("@/assets/img/main-bg.svg") top center / cover no-repeat, rgba(65, 76, 131, 0.60);
+    background-attachment: fixed;
+    font-family: $font-family;
+    font-size: $font-size;
+    font-weight: 400;
+    color: $color-white;
+    display: flex;
+    height: max-content;
+    scrollbar-gutter: stable;
+
+    &--overflow {
+        height: 100vh;
+        overflow: hidden;
+        scrollbar-gutter: stable;
+    }
+}
+
+.page {
+    background: #232326;
+}
+
+.container {
+    max-width: 984px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0 32px;
+}
+
+.page__content {
+    flex-grow: 1;
+    padding-bottom: 40px;
+    max-width: 100%;
+}
+
+
+@media screen and (max-width: $desktop) {
+    .page__content {
+        padding-top: var(--header-height);
+    }
+}
+
+@media screen and (max-width: $mobile-xs) {
+    .container {
+        padding: 0 16px;
+    }
+}
