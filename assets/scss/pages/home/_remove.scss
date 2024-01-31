@@ -87,15 +87,6 @@
 
     &__btn {
         margin-top: auto;
-        padding: 16px 22px;
-        border-radius: 8px;
-        border: 2px solid rgba(222, 224, 227, 0.92);
-        transition: .3s;
-
-        &:hover {
-            border: 2px solid rgba(255, 255, 255, 0.92);
-            background: rgba(255, 255, 255, 0.20);
-        }
     }
 
 }

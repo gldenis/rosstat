@@ -28,7 +28,7 @@ const pagination = ref(null)
             <div class="remove-section__content">
               <div class="remove-section__title">Удаление вашей информации из интернета и приложений</div>
               <div class="remove-section__description">Удаление вашей информации из интернета и приложений</div>
-              <a href="#" class="remove-section__btn">Попробовать бесплатно</a>
+              <a href="#" class="btn btn--outlined remove-section__btn">Попробовать бесплатно</a>
             </div>
           </div>
         </SwiperSlide>
@@ -38,7 +38,7 @@ const pagination = ref(null)
             <div class="remove-section__content">
               <div class="remove-section__title">2 Удаление вашей информации из интернета и приложений</div>
               <div class="remove-section__description">Удаление вашей информации из интернета и приложений</div>
-              <a href="#" class="remove-section__btn">Попробовать бесплатно</a>
+              <a href="#" class="btn btn--outlined remove-section__btn">Попробовать бесплатно</a>
             </div>
           </div>
         </SwiperSlide>
@@ -48,7 +48,7 @@ const pagination = ref(null)
             <div class="remove-section__content">
               <div class="remove-section__title">3 Удаление вашей информации из интернета и приложений</div>
               <div class="remove-section__description">Удаление вашей информации из интернета и приложений</div>
-              <a href="#" class="remove-section__btn">Попробовать бесплатно</a>
+              <a href="#" class="btn btn--outlined remove-section__btn">Попробовать бесплатно</a>
             </div>
           </div>
         </SwiperSlide>
@@ -58,7 +58,7 @@ const pagination = ref(null)
             <div class="remove-section__content">
               <div class="remove-section__title">4 Удаление вашей информации из интернета и приложений</div>
               <div class="remove-section__description">Удаление вашей информации из интернета и приложений</div>
-              <a href="#" class="remove-section__btn">Попробовать бесплатно</a>
+              <a href="#" class="btn btn--outlined remove-section__btn">Попробовать бесплатно</a>
             </div>
           </div>
         </SwiperSlide>

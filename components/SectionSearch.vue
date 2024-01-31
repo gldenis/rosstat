@@ -11,8 +11,8 @@ import IconAgain from "~/components/icons/IconAgain.vue";
       <input class="search-form__input" type="text" placeholder="Номер телефона">
     </div>
     <div class="search-form__buttons">
-      <button class="search-form__btn search-form__btn--blue">Проверить себя</button>
-      <button class="search-form__btn search-form__btn">Проверить других</button>
+      <button class="btn btn--primary search-form__btn">Проверить себя</button>
+      <button class="btn btn--secondary search-form__btn">Проверить других</button>
     </div>
   </form>
 
@@ -27,7 +27,7 @@ import IconAgain from "~/components/icons/IconAgain.vue";
       </label>
     </div>
     <div class="search-form__buttons">
-      <button class="search-form__btn search-form__btn--blue">Начать проверку</button>
+      <button class="btn btn--primary search-form__btn">Начать проверку</button>
     </div>
   </form>
 
@@ -54,7 +54,7 @@ import IconAgain from "~/components/icons/IconAgain.vue";
       </div>
     </div>
     <div class="search-form__buttons">
-      <button class="search-form__btn">Продолжить</button>
+      <button class="btn btn--secondary search-form__btn">Продолжить</button>
     </div>
   </form>
 </template>

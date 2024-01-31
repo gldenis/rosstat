@@ -100,8 +100,8 @@ const onTouchEnd = e => {
         <div class="menu-monitoring">
           <div class="menu-monitoring__title">Мониторинг</div>
           <div class="menu-monitoring__text">Скройте данные от нежелательных лиц</div>
-          <a href="#" class="btn menu-monitoring__btn">
-            <IconArrowRight class="menu__icon" name="arrow-right"/>
+          <a href="#" class="btn btn--outlined btn--small menu-monitoring__btn">
+            <IconArrowRight name="arrow-right"/>
             Подробнее
           </a>
         </div>
