@@ -69,7 +69,8 @@ const checkContact = async () => {
 .email-form {
   margin-top: 60px;
   display: flex;
-  width: 440px;
+  max-width: 440px;
+  width: 100%;
   flex-direction: column;
   gap: 40px;
   border-radius: 8px;
@@ -104,11 +105,28 @@ const checkContact = async () => {
   }
 
   &__progress {
-    width: 440px;
+    max-width: 440px;
+    width: 100%;
     padding: 20px;
     border-radius: 8px;
     background: rgba(0, 0, 0, 0.60);
     margin-top: 60px;
+  }
+}
+
+@media screen and (max-width: $desktop){
+  .page__content {
+    padding-top: calc(var(--header-height) + 60px);
+  }
+
+  .title {
+    text-align: center;
+  }
+}
+
+@media screen and (max-width: $mobile){
+  .email-form {
+    padding: 40px 20px;
   }
 }
 </style>
