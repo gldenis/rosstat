@@ -200,6 +200,7 @@ const toggleRelationList = () => {
     color: #fff;
   }
 }
+
 .media-category {
   &__list {
     display: flex;
@@ -222,6 +223,7 @@ const toggleRelationList = () => {
     line-height: 132%;
   }
 }
+
 .name-relations {
   border-radius: 4px;
   background: rgba(255, 255, 255, 0.2);
@@ -331,7 +333,6 @@ const toggleRelationList = () => {
   border-radius: 8px;
   background-color: rgba(0, 0, 0, 0.60);
   backdrop-filter: blur(4px);
-  width: 920px;
   height: 134px;
   background-image: url('@/assets/img/unlock-top.png'), url('@/assets/img/unlock-bottom.png');
   background-size: 100% 8px, 100% 8px;
@@ -502,6 +503,74 @@ const toggleRelationList = () => {
     right: 4px;
     bottom: 4px;
     left: 4px;
+  }
+}
+
+@media screen and (max-width: $desktop) {
+  .page__content {
+    padding-top: calc(60px + var(--header-height));
+  }
+}
+
+@media screen and (max-width: $laptop) {
+  .result {
+    display: flex;
+    flex-wrap: wrap;
+
+    &__info {
+      width: 100%;
+    }
+
+    &__media {
+      width: calc((100% - 20px) / 2);
+    }
+
+    &__place {
+      width: calc((100% - 20px) / 2);
+    }
+  }
+
+  .result-media {
+    &__item {
+      width: calc((100% - 8px) / 2);
+      aspect-ratio: 156/100;
+
+      img {
+        width: 100%;
+        height: 100%;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: $tablet) {
+  .title--xl {
+    font-size: 28px;
+  }
+
+  .row {
+    flex-wrap: wrap;
+    gap: 16px;
+  }
+  .result {
+    &__media {
+      width: 100%;
+    }
+
+    &__place {
+      width: 100%;
+    }
+  }
+}
+
+@media screen and (max-width: $mobile) {
+  .title--xl {
+    word-break: break-all;
+  }
+
+  .unlock {
+    flex-direction: column;
+    height: auto;
   }
 }
 </style>
