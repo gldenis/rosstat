@@ -1,10 +1,8 @@
 <script setup lang="ts">
-import ResultOther from "~/components/icons/ResultOther.vue";
-
-const result = ref(null)
 const email = ref('')
 const fetchingStarted = ref(false)
 const progress = ref(0)
+const router = useRouter()
 
 const SEARCH_TIME = 3000
 const checkContact = async () => {
@@ -24,17 +22,14 @@ const checkContact = async () => {
 
   clearInterval(interval)
 
-  result.value = {}
+  await router.push('/other/someresultid')
 }
+
 </script>
 
 <template>
   <main class="page__content">
     <div class="container">
-      <template v-if="result">
-        <ResultOther />
-      </template>
-      <template v-else>
         <h1 class="title title--xl">Проверить контакт</h1>
         <p class="subtitle">Из-за недавнего инцидента с Твиттером, есть риск, что ваши данные могут быть использованы в корыстных целях. Наш антивирус выпустил обновление, которое защищает вас от подобного</p>
         <div v-if="fetchingStarted" class="email-form__progress">
@@ -45,8 +40,6 @@ const checkContact = async () => {
           <input type="email" class="email-form__input" placeholder="Адрес эл. почты" v-model="email">
           <button class="btn email-form__btn">Запустить проверку</button>
         </form>
-      </template>
-
     </div>
   </main>
 </template>
