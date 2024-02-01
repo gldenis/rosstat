@@ -3,9 +3,11 @@
 </script>
 
 <template>
-  <div></div>
+  <main class="page__content">
+
+  </main>
 </template>
 
-<style scoped>
+<style scoped lang="scss">
 
 </style>

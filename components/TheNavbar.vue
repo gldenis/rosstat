@@ -13,6 +13,15 @@ const onTouchMove = e => {
 const onTouchEnd = e => {
   swipeStart.value = e.changedTouches[0].pageY;
 }
+const route = useRoute()
+
+watch(
+  () => route.params,
+  async newId => {
+    console.log(123)
+    mobileNavOpened.value = false
+  }
+)
 </script>
 
 <template>
