@@ -20,28 +20,72 @@ const formSubmit = () => {
           </RouterLink>
         </div>
       </div>
-      <form class="login-form" @click.prevent="formSubmit">
-        <IconMe class="login-form__icon" width="48" height="48" />
-        <div class="login-form__title">Войти</div>
-        <div class="login-form__fields-list">
-          <label class="login-form__field">
-            <input type="text" class="login-form__input" placeholder="Адрес эл. почты">
-          </label>
-          <label class="login-form__field">
-            <input type="text" class="login-form__input" placeholder="Адрес эл. почты">
-          </label>
+      <div class="registration__wrapper">
+        <form class="login-form" @click.prevent="formSubmit">
+          <IconRegistration class="login-form__icon" width="48" height="48" />
+          <div class="login-form__title">Создать аккаунт</div>
+          <div class="login-form__fields-list">
+            <label class="login-form__field">
+              <input type="text" class="login-form__input" placeholder="Адрес эл. почты">
+            </label>
+            <label class="login-form__field">
+              <input type="text" class="login-form__input" placeholder="Придумайте пароль">
+            </label>
+          </div>
+          <div class="login-form__buttons">
+            <button class="btn btn--accent">Создать аккаунт</button>
+          </div>
+        </form>
+        <div class="registration-advantages">
+          <div class="registration-advantages__item" v-for="item of 7">
+            <IconProtection class="registration-advantages__icon" width="24" height="24"/>
+            <div class="registration-advantages__text">9 лет на защите ваших данных</div>
+          </div>
         </div>
-        <div class="login-form__buttons">
-          <button class="btn btn--primary">Войти</button>
-          <button class="btn btn--transparent">Я забыл пароль</button>
-        </div>
-      </form>
+      </div>
     </div>
   </main>
 </template>
 
 
 <style scoped lang="scss">
+.registration__wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: stretch;
+  margin-top: 80px;
+
+  .login-form {
+    margin-right: 0;
+    margin-top: 0;
+    margin-left: 0;
+    max-width: 320px;
+    border-radius: 8px 0 0 8px;
+  }
+}
+.registration-advantages {
+  max-width: 560px;
+  width: 100%;
+  border-radius: 0 8px 8px 0;
+  background: rgba(0, 0, 0, 0.6);
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+
+  &__item {
+    color: rgba(21, 153, 90, 0.92);
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 140%;
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    border-radius: 8px;
+    background: linear-gradient(90.00deg, rgba(28, 154, 96, 0),rgba(28, 154, 96, 0.32) 100%);
+    padding: 12px 12px 12px 0px
+  }
+}
 .row {
   display: flex;
   align-items: center;
@@ -130,6 +174,39 @@ const formSubmit = () => {
       background: #fff;
       color: #000;
     }
+  }
+}
+
+@media screen and (max-width: $desktop){
+  .page__content {
+    padding-top: calc(var(--header-height) + 60px);
+  }
+}
+
+@media screen and (max-width: $tablet){
+  .row {
+    flex-direction: column;
+    align-items: center;
+    gap: 40px;
+  }
+
+  .title--xl {
+    text-align: center;
+  }
+
+  .registration__wrapper {
+    flex-direction: column;
+    align-items: center;
+
+    .login-form {
+      max-width: 440px;
+      border-radius: 8px 8px 0 0;
+    }
+  }
+
+  .registration-advantages {
+    max-width: 440px;
+    border-radius: 0 0 8px 8px;
   }
 }
 </style>
