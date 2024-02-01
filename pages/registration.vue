@@ -40,12 +40,12 @@ const formSubmit = () => {
   </main>
 </template>
 
+
 <style scoped lang="scss">
 .row {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 24px;
 }
 .page__content {
   padding-top: 60px;
@@ -130,24 +130,6 @@ const formSubmit = () => {
       background: #fff;
       color: #000;
     }
-  }
-}
-
-@media screen and (max-width: $desktop){
-  .page__content {
-    padding-top: calc(var(--header-height) + 60px);
-  }
-}
-
-@media screen and (max-width: $tablet){
-  .row {
-    flex-direction: column;
-    align-items: center;
-    gap: 40px;
-  }
-
-  .title--xl {
-    text-align: center;
   }
 }
 </style>
